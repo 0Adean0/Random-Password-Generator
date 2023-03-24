@@ -7,22 +7,8 @@ var password = 10;
 
 
 
-
-
-
-// how amn i going to get the users password length?
-//prompt
-
-
-
-//concats implemented for userGenArr's
-
-
-
 //asignment code
 var generateBtn = document.querySelector("#generate");
-
-
 
 // Write password to the #password input
 function writePassword() {
@@ -35,6 +21,24 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// how amn i going to get the users password length?
+//prompt
+
+
+
+//concats implemented for userGenArr's
+
+
+
+
+
+
+
+
+
+
+
 
 
 
