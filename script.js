@@ -29,19 +29,27 @@ function generatePassword(){
     var inputLength = prompt("Input password, character count between 8 - 128")
 // is the user length bigger than 8 but smaller than 128
 
-if(inputLength < 8 || inputLength > 128){
+if(inputLength < 8 && inputLength > 128){
     alert("Chosen password must be between 8 - 128 characters...")
     return generatePassword();
 } 
 
+var lc = confirmation("Do you want uppercase characters included?")
 
+var uc = confirmation("Do you want uppercase characters included?")
 
+var n = confirmation("Do you want numbers included?")
+
+var spc = confirmation("do you want special characters included?")
+
+// potentially generated user error's
+if (!lc && !uc && !n && !spc) {
+    alert("You must choose one of the preceeding options...")
+
+    return generatePassword();
+}
+
+//concats implemented for userGenArrs
 
 
 }
-
-
-
-
-
-//concats implemented for userGenArr's
