@@ -50,6 +50,25 @@ if (!lc && !uc && !n && !spc) {
 }
 
 //concats implemented for userGenArrs
+if (lc) {
+    userPopArr = userPopArr.concat(lowerCase);
 
+    password.push(lowerCase[Math.floor(Math.random() * lowerCase.length)])
+}
+if (uc) {
+    userPopArr = userPopArr.concat(upperCase);
+
+    password.push(upperCase[Math.floor(Math.random() * upperCase.length)])
+}
+if (n) {
+    userPopArr = userPopArr.concat(numbers);
+
+    password.push(numbers[Math.floor(Math.random() * numbers.length)])
+}
+if (spc) {
+    userPopArr = userPopArr.concat(specialCharacters);
+
+    password.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)])
+}
 
 }
