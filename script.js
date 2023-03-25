@@ -22,27 +22,26 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// how amn i going to get the users password length?
+// how am i going to get the users password length?
 //prompt
+
+function generatePassword(){
+    var inputLength = prompt("Input password, character count between 8 - 128")
+// is the user length bigger than 8 but smaller than 128
+
+if(inputLength < 8 || inputLength > 128){
+    alert("Chosen password must be between 8 - 128 characters...")
+    return generatePassword();
+} 
+
+
+
+
+
+}
+
+
 
 
 
 //concats implemented for userGenArr's
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
