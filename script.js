@@ -3,7 +3,7 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]//10 
 var specialCharacters = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "{", "[", "]", "}", "|", ";", ":", "'", ",", "<", ">", ".", "/", "?"] //31
 var userPopArr = [""]
-var password = 10;
+var password = [10]
 
 
 
@@ -34,13 +34,13 @@ if(inputLength < 8 && inputLength > 128){
     return generatePassword();
 } 
 
-var lc = confirmation("Do you want uppercase characters included?")
+var lc = confirm("Do you want uppercase characters included?")
 
-var uc = confirmation("Do you want uppercase characters included?")
+var uc = confirm("Do you want uppercase characters included?")
 
-var n = confirmation("Do you want numbers included?")
+var n = confirm("Do you want numbers included?")
 
-var spc = confirmation("do you want special characters included?")
+var spc = confirm("do you want special characters included?")
 
 // potentially generated user error's
 if (!lc && !uc && !n && !spc) {
@@ -48,6 +48,7 @@ if (!lc && !uc && !n && !spc) {
 
     return generatePassword();
 }
+
 
 //concats implemented for userGenArrs
 if (lc) {
@@ -71,4 +72,12 @@ if (spc) {
     password.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)])
 }
 
+var randomizer1 = []
+
+for (var i = password.length; i< (inputLength);i++) {
+    password.push(userPopArr[Math.floor(Math.random() * userPopArr.length)])
+
+    console.log(password);
 }
+}
+
