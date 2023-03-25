@@ -40,6 +40,7 @@ var uc = confirm("Do you want uppercase characters included?")
 
 var n = confirm("Do you want numbers included?")
 
+
 var spc = confirm("do you want special characters included?")
 
 // potentially generated user error's
