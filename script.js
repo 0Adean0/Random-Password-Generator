@@ -25,60 +25,61 @@ generateBtn.addEventListener("click", writePassword);
 // how am i going to get the users password length?
 //prompt
 
-function generatePassword(){
+function generatePassword() {
     var inputLength = prompt("Input password, character count between 8 - 128")
-// is the user length bigger than 8 but smaller than 128
+    // is the user length bigger than 8 but smaller than 128
 
-if(inputLength < 8 && inputLength > 128){
-    alert("Chosen password must be between 8 - 128 characters...")
-    return generatePassword();
-} 
+    if (inputLength < 8 && inputLength > 128) {
+        alert("Chosen password must be between 8 - 128 characters...")
+        return generatePassword();
+    }
 
-var lc = confirm("Do you want uppercase characters included?")
+    var lc = confirm("Do you want uppercase characters included?")
+    var uc = confirm("Do you want uppercase characters included?")
+    var n = confirm("Do you want numbers included?")
+    var spc = confirm("do you want special characters included?")
 
-var uc = confirm("Do you want uppercase characters included?")
+    // potentially generated user error's
+    if (!lc && !uc && !n && !spc) {
+        alert("You must choose one of the preceeding options...")
 
-var n = confirm("Do you want numbers included?")
+        return generatePassword();
+    }
 
 
-var spc = confirm("do you want special characters included?")
+    //concats implemented for userGenArrs
+    if (lc) {
+        userPopArr = userPopArr.concat(lowerCase);
 
-// potentially generated user error's
-if (!lc && !uc && !n && !spc) {
-    alert("You must choose one of the preceeding options...")
+        password.push(lowerCase[Math.floor(Math.random() * lowerCase.length)])
+    }
+    if (uc) {
+        userPopArr = userPopArr.concat(upperCase);
 
-    return generatePassword();
+        password.push(upperCase[Math.floor(Math.random() * upperCase.length)])
+    }
+    if (n) {
+        userPopArr = userPopArr.concat(numbers);
+
+        password.push(numbers[Math.floor(Math.random() * numbers.length)])
+    }
+    if (spc) {
+        userPopArr = userPopArr.concat(specialCharacters);
+
+        password.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)])
+    }
+
+    var randomizer1 = []
+
+    for (var i = password.length; i < (inputLength); i++) {
+        password.push(userPopArr[Math.floor(Math.random() * userPopArr.length)])
+
+        console.log(password);
+    }
+
+
+ password = password.join("");
+
+return password;
+
 }
-
-
-//concats implemented for userGenArrs
-if (lc) {
-    userPopArr = userPopArr.concat(lowerCase);
-
-    password.push(lowerCase[Math.floor(Math.random() * lowerCase.length)])
-}
-if (uc) {
-    userPopArr = userPopArr.concat(upperCase);
-
-    password.push(upperCase[Math.floor(Math.random() * upperCase.length)])
-}
-if (n) {
-    userPopArr = userPopArr.concat(numbers);
-
-    password.push(numbers[Math.floor(Math.random() * numbers.length)])
-}
-if (spc) {
-    userPopArr = userPopArr.concat(specialCharacters);
-
-    password.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)])
-}
-
-var randomizer1 = []
-
-for (var i = password.length; i< (inputLength);i++) {
-    password.push(userPopArr[Math.floor(Math.random() * userPopArr.length)])
-
-    console.log(password);
-}
-}
-
