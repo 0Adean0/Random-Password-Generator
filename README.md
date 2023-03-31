@@ -14,7 +14,7 @@ To navigate the Random Password Generator, the user can click on generate passwo
 
 ![screenshot of RandomPassword](./images/_C__Users_Adavi_bootcamp_Random-Password-Generator_index.html.png).png
 
-![link to the deployed program](https://0adean0.github.io/Random-Password-Generator/)
+[program](https://0adean0.github.io/Random-Password-Generator/)
 ## Credits
 https://www.w3schools.com/js/js_conventions.asp
 w3 schools misc
