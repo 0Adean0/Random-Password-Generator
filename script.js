@@ -30,7 +30,8 @@ function generatePassword() {
     // is the user length bigger than 8 but smaller than 128
 
     if (inputLength < 8 && inputLength > 128) {
-        alert("Chosen password must be between 8 - 128 characters...")
+        window.alert("Chosen password must be between 8 - 128 characters...")
+        
         return generatePassword();
     }
 
