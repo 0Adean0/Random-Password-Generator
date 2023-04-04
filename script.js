@@ -26,10 +26,10 @@ generateBtn.addEventListener("click", writePassword);
 //prompt
 
 function generatePassword() {
-    var inputLength = prompt("Input password, character count between 8 - 128")
+    var inputLength = window.prompt("Input password, character count between 8 - 128")
     // is the user length bigger than 8 but smaller than 128
 
-    if (inputLength < 8 && inputLength > 128) {
+    if (inputLength < 8 || inputLength > 128) {
         window.alert("Chosen password must be between 8 - 128 characters...")
         return
     }
