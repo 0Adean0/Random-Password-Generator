@@ -31,8 +31,7 @@ function generatePassword() {
 
     if (inputLength < 8 && inputLength > 128) {
         window.alert("Chosen password must be between 8 - 128 characters...")
-        
-        return generatePassword();
+        return
     }
 
     var lc = confirm("Do you want uppercase characters included?")
